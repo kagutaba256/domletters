@@ -6,11 +6,11 @@ words = []
 
 # word processing
 for line in fileinput.input():
-    ws = line.rstrip().split(" ")
-    for word in ws:
+    words_to_add = line.rstrip().split(" ")
+    for word in words_to_add:
         if len(word) == 0:
             continue
-        if all([c.isalpha() for c in word]):
+        if all([letter.isalpha() for letter in word]):
             words.append(word.lower())
 
 # summing up the counts for each word
