@@ -19,3 +19,8 @@ for word in words:
     count += max([word.count(letter) for letter in word])
 
 print(count)
+
+# SOURCES
+# https://stackoverflow.com/questions/22520932/python-remove-all-non-alphabet-chars-from-string
+# https://www.geeksforgeeks.org/python-boolean-list-and-and-or-operations/
+# https://stackoverflow.com/questions/1155617/count-the-number-occurrences-of-a-character-in-a-string
