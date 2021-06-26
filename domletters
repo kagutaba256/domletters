@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+
+import fileinput
+
+words = []
+
+# word processing
+for line in fileinput.input():
+    ws = line.rstrip().split(" ")
+    for word in ws:
+        if len(word) == 0:
+            continue
+        if all([c.isalpha() for c in word]):
+            words.append(word.lower())
+
+# summing up the counts for each word
+count = 0
+for word in words:
+    count += max([word.count(letter) for letter in word])
+
+print(count)
